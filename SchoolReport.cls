@@ -125,7 +125,7 @@
 }
 \ProcessOptions*
 
-\LoadClass[twoside, letterpaper, 12pt]{report}
+\LoadClass[twoside, openright, letterpaper, 12pt]{report}
 
 % ------------------------------------------------------------------------------
 % PDF
@@ -258,8 +258,7 @@
 % Pages
 % ------------------------------------------------------------------------------
 
-% Code for creating empty pages
-% No headers on empty pages before new chapter
+% Redefinir `\cleardoublepage` pour que les pages de garde ne soient pas paginées.
 \renewcommand{\cleardoublepage}{%
 	\clearpage%
 	\if@twoside
@@ -276,20 +275,6 @@
 		\fi%
 	\fi
 }
-
-
-% Redefine '/chapter' to always start on an odd page.
-% Should make no difference in singleside mode.
-\renewcommand{\chapter}{%
-	\cleardoublepage%
-	\global\@topnum\z@% Prevents figures from going at top of page.
-	\@afterindenttrue%
-	\secdef\@chapter\@schapter%
-}
-
-\markright{}
-\pagestyle{myheadings}
-\pagenumbering{arabic}
 
 % ------------------------------------------------------------------------------
 % Page titre
@@ -365,6 +350,11 @@
 \AtBeginDocument{
 	\thispagestyle{empty}
 	\maketitle
+	\newpage
+	\thispagestyle{empty}
+	\pagenumbering{globbe}
+	\mbox{}
+	\newpage
 	\pagenumbering{roman}
 }
 
