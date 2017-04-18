@@ -109,7 +109,7 @@
 %   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UqamLab}[2017/04/09 v1.0 Classe pour les travaux scolaires]
+\ProvidesClass{UqamLab}[2017/04/17 v1.1 Classe pour les travaux scolaires]
 
 % ------------------------------------------------------------------------------
 % Options et classe de base
@@ -263,6 +263,7 @@
 	\newpage
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
+	\renewcommand{\@chapapp}{}
 }
 
 % ------------------------------------------------------------------------------
