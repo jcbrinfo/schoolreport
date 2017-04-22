@@ -260,7 +260,7 @@
 
 % Débuter le corps du document
 \newcommand{\body}{
-	\newpage
+	\cleardoublepage
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
 	\renewcommand{\@chapapp}{}
@@ -362,11 +362,7 @@
 \AtBeginDocument{
 	\thispagestyle{empty}
 	\maketitle
-	\newpage
-	\thispagestyle{empty}
-	\pagenumbering{globbe}
-	\mbox{}
-	\newpage
+	\cleardoublepage
 	\pagenumbering{roman}
 }
 
