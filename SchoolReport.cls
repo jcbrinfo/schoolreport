@@ -120,6 +120,11 @@
 	\renewcommand{\@ifEnglish}[2]{#1}
 }
 
+\newcommand{\@ifArticle}[2]{#2}
+\DeclareOption{article}{
+	\renewcommand{\@ifArticle}[2]{#1}
+}
+
 \DeclareOption*{
 	\PassOptionsToClass{\CurrentOption}{report}
 }
@@ -264,6 +269,10 @@
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
 }
+
+\@ifArticle{
+	\renewcommand{\thesection}{\arabic{section}}
+}{}
 
 % ------------------------------------------------------------------------------
 % Pages
