@@ -263,7 +263,6 @@
 	\cleardoublepage
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
-	\renewcommand{\@chapapp}{}
 }
 
 % ------------------------------------------------------------------------------
