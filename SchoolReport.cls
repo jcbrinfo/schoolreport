@@ -252,7 +252,7 @@
 % Marges
 % ------------------------------------------------------------------------------
 
-\RequirePackage[margin=1.5cm, inner=6.5cm, outer=1.9cm, nohead, includefoot]{geometry}
+\RequirePackage[margin=1.5cm, outer=5.9cm, inner=2.5cm, nohead, includefoot]{geometry}
 
 % ------------------------------------------------------------------------------
 % Chapitres et sections
