@@ -77,7 +77,6 @@
 % * `natbib`
 % * `pdflscape`
 % * `setspace`
-% * `textcase`
 % * `url`
 % * `xcolor`
 %
@@ -109,7 +108,7 @@
 %   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UqamLab}[2017/04/17 v1.1 Classe pour les travaux scolaires]
+\ProvidesClass{UqamLab}[2017/04/21 v2.0 Classe pour les travaux scolaires]
 
 % ------------------------------------------------------------------------------
 % Options et classe de base
@@ -142,19 +141,6 @@
 \RequirePackage[hidelinks]{hyperref}
 % Solution de contournement d’un bug d’`hyperref` avec un `%` dans le texte.
 \RequirePackage{bookmark}
-
-% ------------------------------------------------------------------------------
-% Case
-% ------------------------------------------------------------------------------
-
-\RequirePackage{textcase}
-\newcommand{\@UpperRef}[1]{%
-	\texorpdfstring{%
-		\MakeTextUppercase{#1}%
-	}{%
-		#1%
-	}%
-}
 
 % ------------------------------------------------------------------------------
 % Polices de caractères
