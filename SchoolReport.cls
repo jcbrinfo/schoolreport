@@ -76,7 +76,6 @@
 % * `ltabulary`
 % * `natbib`
 % * `pdflscape`
-% * `setspace`
 % * `url`
 % * `xcolor`
 %
