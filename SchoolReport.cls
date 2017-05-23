@@ -23,6 +23,10 @@
 %
 % Citations
 % ---------
+% * Pour utiliser le style de citation « numérique » à la place de celui
+%   recommandée par l’UQAM, activez l’option `citeNumbers` de cette classe.
+%   Cette option a été ajouté puisque, malheureusement, `\setcitestyle` ne
+%   fonctionne qu’en partie selon la version de `natbib`.
 % * Pour suivre le style de citation par défaut de l’UQAM, utilisez `\citep*` et
 %   `\citet*` (les variantes sans astérisque ne mentionnant que le premier
 %   auteur).
@@ -121,6 +125,10 @@
 \newcommand{\@ifArticle}[2]{#2}
 \DeclareOption{article}{
 	\renewcommand{\@ifArticle}[2]{#1}
+}
+
+\DeclareOption{citeNumbers}{
+	\PassOptionsToPackage{numbers, sort, square}{natbib}
 }
 
 \DeclareOption*{
