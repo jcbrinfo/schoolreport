@@ -112,7 +112,7 @@
 %   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UqamLab}[2017/04/21 v2.0 Classe pour les travaux scolaires]
+\ProvidesClass{UqamLab}[2017-05-23 v3.0 Classe pour les travaux scolaires]
 
 % ------------------------------------------------------------------------------
 % Options et classe de base
@@ -191,6 +191,12 @@
 	\RequirePackage[canadien, english]{babel}
 }{
 	\RequirePackage[english, canadien]{babel}
+}
+
+% Désactiver les changements étranges de la mise en page.
+\frenchbsetup {
+	StandardLists=true, % Les listes par défaut sont plus lisibles.
+	FrenchFootnotes=false % À l’UQAM, on suit la même règle qu’en anglais (appel de note toujours en exposant).
 }
 
 % Désactiver les régles d’espacement françaises.
