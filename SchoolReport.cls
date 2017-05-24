@@ -112,7 +112,7 @@
 %   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UqamLab}[2017/05/23 v3.0 Classe pour les travaux scolaires]
+\ProvidesClass{UqamLab}[2017/05/24 v3.1 Classe pour les travaux scolaires]
 
 % ------------------------------------------------------------------------------
 % Options et classe de base
@@ -188,9 +188,12 @@
 % ------------------------------------------------------------------------------
 
 \@ifEnglish{
-	\RequirePackage[canadien, english]{babel}
+	% Il semble y avoir un bug lorsque `babel` chargé depuis `RequirePackage` :
+	% `canadien` prend toujours le dessus, à moins que l’option `main` soit
+	% explicitée.
+	\RequirePackage[canadien, main=english]{babel}
 }{
-	\RequirePackage[english, canadien]{babel}
+	\RequirePackage[english, main=canadien]{babel}
 }
 
 % Désactiver les changements étranges de la mise en page.
